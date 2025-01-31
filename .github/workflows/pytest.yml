@@ -1,6 +1,6 @@
 name: pytest
 
-on: workflow_dispatch
+on: [push]
 
 jobs:
   pytest:
@@ -12,7 +12,7 @@ jobs:
           cd python-demo
 
       - name: pip install
-        run: pip install -r python-demo/requirements.txt
+        run: pip install -r requirements.txt
 
       - name: run pytest
-        run: pytest python-demo/tests/test.py
+        run: pytest .
