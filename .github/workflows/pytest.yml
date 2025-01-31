@@ -7,14 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clone repository
-        run: git clone https://github.com/YZXBiz/python-demo
+        uses: actions/checkout@v4
 
       - name: pip install
         working-directory: python-demo
         run: |
           ls -l
           pip install -r requirements.txt
-          pip install pytest  # Ensure pytest is installed
 
       - name: run pytest
         working-directory: python-demo
