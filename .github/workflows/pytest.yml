@@ -10,11 +10,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: pip install
-        working-directory: python-demo
         run: |
           ls -l
           pip install -r requirements.txt
 
       - name: run pytest
-        working-directory: python-demo
         run: pytest .
