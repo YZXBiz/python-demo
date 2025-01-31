@@ -1,16 +1,18 @@
 name: pytest
+
 on: workflow_dispatch
 
 jobs:
-
   pytest:
     runs-on: ubuntu-latest
     steps:
       - name: clone repository
         run: |
-          git clone https://github.com/xiaopeng163/github-actions-python
-          cd github-actions-python
-      - name: install pytest
-        run: pip install pytest
+          git clone https://github.com/YZXBiz/python-demo
+          cd python-demo
+
+      - name: pip install
+        run: pip install -r python-demo/requirements.txt
+
       - name: run pytest
-        run: pytest
+        run: pytest python-demo/tests/test.py
