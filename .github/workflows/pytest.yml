@@ -6,9 +6,6 @@ jobs:
   pytest:
     runs-on: ubuntu-latest
     steps:
-      - name: print github action context
-        run: echo ${{ toJson(github) }}
-
       - name: checkout code
         uses: actions/checkout@v4
 
